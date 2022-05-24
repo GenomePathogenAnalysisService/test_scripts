@@ -1,20 +1,6 @@
 # ! /bin/bash
 
-git clone git@github.com:GenomePathogenAnalysisService/gpas-covid-synthetic-reads.git
-
-git clone https://github.com/oxfordmmm/gumpy
-cd gumpy
-pip install -r requirements.txt
-python setup.py build --force
-pip install .
-cd ..
-
-git clone https://github.com/cov-lineages/constellations.git
-
 cd gpas-covid-synthetic-reads
-
-pip install -r requirements.txt
-pip install -e .
 
 for tech in illumina nanopore; do
     for primer in articv3 articv4 midnight1200; do
