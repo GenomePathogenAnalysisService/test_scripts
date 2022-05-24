@@ -1,4 +1,4 @@
-#! /bin/bash
+# ! /bin/bash
 
 git clone git@github.com:GenomePathogenAnalysisService/gpas-covid-synthetic-reads.git
 
@@ -16,12 +16,11 @@ cd gpas-covid-synthetic-reads
 pip install -r requirements.txt
 pip install -e .
 
-cd gpas-covid-synthetic-reads
 for tech in illumina nanopore; do
     for primer in articv3 articv4 midnight1200; do
-        for snps in {4..6}; do
-            for coverage in {100..500..200}; do
-                for error in {1..10..4}; do
+        for snps in 4; do
+            for coverage in 10 500; do
+                for error in 1 8; do
                     for lineage in cB.1.1.7 cB.1.617.2 cB.1.1.529 cBA.1 cBA.2 cBA.3; do
                         echo "$primer : $snps - $coverage -- error: $error -- lineage $lineage"
                         python3 bin/gpas-covid-synreads-create.py\
@@ -38,11 +37,10 @@ for tech in illumina nanopore; do
             done;
         done;
     done;
-    echo "Synthetic data generation is done for Illumina and Nanopore"
 done;
 
 ls *fastq | gzip *fastq
-mkdir illumina nanopore
+mkdir illumina
+mkdir nanopore
 mv illumina-* illumina/
 mv nanopore-* nanopore/
-
