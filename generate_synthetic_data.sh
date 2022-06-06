@@ -1,4 +1,6 @@
 
+#! /bin/bash
+
 for tech in illumina nanopore; do
     for primer in articv3 articv4 midnight1200; do
         for snps in 4; do
