@@ -19,3 +19,15 @@ git clone https://github.com/cov-lineages/constellations.git
 
 pip install -r requirements.txt
 pip install -e .
+
+cd ..
+git clone git@github.com:GenomePathogenAnalysisService/gpas-uploader.git
+cd gpas-uploader
+
+pip install .
+
+git clone https://github.com/GenomePathogenAnalysisService/read-it-and-keep.git
+cd read-it-and-keep/src
+make
+mv readItAndKeep ../..
+cd ../..
