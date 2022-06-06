@@ -1,4 +1,3 @@
-
 #! /bin/bash
 
 for tech in illumina nanopore; do
