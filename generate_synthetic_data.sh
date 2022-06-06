@@ -9,7 +9,7 @@ for tech in illumina nanopore; do
                         echo "$primer : $snps - $coverage -- error: $error -- lineage $lineage"
                         gpas-covid-synreads-create.py\
                         --tech $tech\
-                        --pango_definitions gpas-covid-synthetic-reads/constellations/\
+                        --pango_definitions constellations/\
                         --variant_name $lineage\
                         --primers $primer\
                         --depth $coverage\
