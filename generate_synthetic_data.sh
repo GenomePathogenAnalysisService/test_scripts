@@ -1,4 +1,3 @@
-# ! /bin/bash
 
 for tech in illumina nanopore; do
     for primer in articv3 articv4 midnight1200; do
@@ -9,7 +8,7 @@ for tech in illumina nanopore; do
                         echo "$primer : $snps - $coverage -- error: $error -- lineage $lineage"
                         gpas-covid-synreads-create.py\
                         --tech $tech\
-                        --pango_definitions constellations/\
+                        --pango_definitions gpas-covid-synthetic-reads/constellations/\
                         --variant_name $lineage\
                         --primers $primer\
                         --depth $coverage\
