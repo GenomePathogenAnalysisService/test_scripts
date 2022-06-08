@@ -19,3 +19,5 @@ Scripts tp be use in the end-to-end testing of GPAS
 3. generate_gpas_uploader_csv.sh   => genereate csv files to illumina and nanopore ready to be used by the gpas uploader 
 
 4. tags => tag file to be used on the tag column pf the samples' csv
+
+5. test_illumina.sh and test_nanopore.sh => script to execute once the samples have been uplodaded and unreleased. 
