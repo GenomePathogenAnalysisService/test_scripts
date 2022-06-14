@@ -23,3 +23,5 @@ Scripts tp be use in the end-to-end testing of GPAS
 5. test_illumina.sh and test_nanopore.sh => script to execute once the samples have been uplodaded and unreleased. 
 
 6. Install gpas-covid-synthetic-reads repo
+
+7. Create sample data optimized to test FN4
