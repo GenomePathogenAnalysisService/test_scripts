@@ -21,3 +21,5 @@ Scripts tp be use in the end-to-end testing of GPAS
 4. tags => tag file to be used on the tag column pf the samples' csv
 
 5. test_illumina.sh and test_nanopore.sh => script to execute once the samples have been uplodaded and unreleased. 
+
+6. Install gpas-covid-synthetic-reads repo
